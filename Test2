@@ -1,0 +1,3 @@
+var foo = "You ";
+var bar = "suck.";
+alert(foo + bar);
