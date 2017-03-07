@@ -13,17 +13,17 @@ namespace FrontEnd.Controllers
         public ActionResult Index()
         {
             var model = new SplashPageViewModel();
-            model.TopFiveBeers.Add(new Beer { Name = "Beer 1" });
-            model.TopFiveBeers.Add(new Beer { Name = "Beer 2" });
-            model.TopFiveBeers.Add(new Beer { Name = "Beer 3" });
-            model.TopFiveBeers.Add(new Beer { Name = "Beer 4" });
-            model.TopFiveBeers.Add(new Beer { Name = "Beer 5" });
+            model.TopFiveBeers.Add(new Beer { Name = "Ale" });
+            model.TopFiveBeers.Add(new Beer { Name = "Lager" });
+            model.TopFiveBeers.Add(new Beer { Name = "Stout" });
+            model.TopFiveBeers.Add(new Beer { Name = "Pale Ale" });
+            model.TopFiveBeers.Add(new Beer { Name = "Pilsner" });
 
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 1" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 2" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 3" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 4" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 5" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Cheese" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Pepperoni" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Hawaiian" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Combination" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Sausage" });
             return View(model);
         }
 
