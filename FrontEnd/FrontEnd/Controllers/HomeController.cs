@@ -29,7 +29,7 @@ namespace FrontEnd.Controllers
 
 
             var model = new SplashPageViewModel();
-        model.TopFiveBeers = blah;
+        model.TopFiveBeers = blah.Take(5).ToList();
             //model.TopFiveBeers.Add(new Beer { Name = "Beer 1" });
             //model.TopFiveBeers.Add(new Beer { Name = "Beer 2" });
             //model.TopFiveBeers.Add(new Beer { Name = "Beer 3" });
