@@ -39,7 +39,7 @@
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
                         <input type="submit" value="Log in" class="btn btn-default" />
-                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        <div class="g-signin2" data-onerror="onError" data-onsuccess="onSignIn"></div>
                     </div>
                 </div>
                 <p>
@@ -61,4 +61,5 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/login")
 }
