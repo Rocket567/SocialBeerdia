@@ -11,11 +11,10 @@
                 <h2>Top 5 Beers</h2>
             </div>
             <ul class="list-group">
-                <li class="list-group-item">Beer1</li>
-                <li class="list-group-item">Beer2</li>
-                <li class="list-group-item">Beer3</li>
-                <li class="list-group-item">Beer4</li>
-                <li class="list-group-item">Beer5</li>
+                @foreach(var beer in Model.TopFiveBeers)
+                {
+                    <li class="list-group-item">@beer.Name</li>
+                }
             </ul>
         </div>
     </div>
@@ -37,11 +36,10 @@
                 <h2>Top 5 Pizzas</h2>
             </div>
             <ul class="list-group">
-                <li class="list-group-item">Pizza1</li>
-                <li class="list-group-item">Pizza2</li>
-                <li class="list-group-item">Pizza3</li>
-                <li class="list-group-item">Pizza4</li>
-                <li class="list-group-item">Pizza5</li>
+                @foreach (var pizza in Model.TopFivePizzas)
+                {
+                    <li class="list-group-item">@pizza.Name</li>
+                }
             </ul>
         </div>
     </div>

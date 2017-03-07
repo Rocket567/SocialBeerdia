@@ -8,8 +8,8 @@ namespace FrontEnd.ViewModels
 {
     public class SplashPageViewModel
     {
-        public List<string> TopFiveBeers { get; set; }
-        public List<string> TopFivePizzas { get; set; }
+        public List<Beer> TopFiveBeers { get; set; }
+        public List<Pizza> TopFivePizzas { get; set; }
         public Pizza PizzaOfTheDay { get; set; }
         public Beer BeerOfTheDay { get; set; }
     }
