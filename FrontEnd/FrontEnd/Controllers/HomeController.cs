@@ -36,11 +36,11 @@ namespace FrontEnd.Controllers
             //model.TopFiveBeers.Add(new Beer { Name = "Beer 4" });
             //model.TopFiveBeers.Add(new Beer { Name = "Beer 5" });
 
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 1" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 2" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 3" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 4" });
-            model.TopFivePizzas.Add(new Pizza { Name = "Pizza 5" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Cheese" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Pepperoni" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Hawaiian" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Combination" });
+            model.TopFivePizzas.Add(new Pizza { Name = "Sausage" });
             return View(model);
         }
 
