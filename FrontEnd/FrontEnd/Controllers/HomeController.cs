@@ -13,28 +13,12 @@ namespace FrontEnd.Controllers
 {
     public class HomeController : Controller
     {
-
-       
-
-    
-    public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index()
         {
-
-             //  Get("sss");
-
-       //     MakeRequest();
-        var blah = await GetBeerAsync("beer/beer/");
-
-       
-
-
+            var blah = await GetBeerAsync("beer/beer/");
             var model = new SplashPageViewModel();
-        model.TopFiveBeers = blah.Take(5).ToList();
-            //model.TopFiveBeers.Add(new Beer { Name = "Beer 1" });
-            //model.TopFiveBeers.Add(new Beer { Name = "Beer 2" });
-            //model.TopFiveBeers.Add(new Beer { Name = "Beer 3" });
-            //model.TopFiveBeers.Add(new Beer { Name = "Beer 4" });
-            //model.TopFiveBeers.Add(new Beer { Name = "Beer 5" });
+
+            model.TopFiveBeers = blah.Take(5).ToList();  // Take just first five returned beer items for "Top 5"
 
             model.TopFivePizzas.Add(new Pizza { Name = "Cheese" });
             model.TopFivePizzas.Add(new Pizza { Name = "Pepperoni" });
@@ -68,36 +52,6 @@ namespace FrontEnd.Controllers
 
             return beers;
         }
-        //static async void MakeRequest()
-        //{
-        //    var client = new HttpClient();
-        //    var queryString = HttpUtility.ParseQueryString(string.Empty);
-
-        //    // Request headers
-        //    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "dd5c6e92a043401a9c5a26c4e60938d0");
-        //    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-        //    var uri = "http://beerdia.azure-api.net/beer/beer/?" + queryString;
-
-        //    var response = await client.GetAsync(uri);
-        //}
-
-
-
-        //public Beer Get(string id)
-        //{
-        //    var rtn = default(Beer);
-
-        //    var task = Task.Run(() => GetBeerAsync("api/beer"));
-        //    var result = task.Result;
-        //    //var status = result?.Status;
-        //    //if (!string.IsNullOrEmpty(status) && status == "success")
-        //    //{
-        //    //    rtn = result.Data;
-        //    //}
-
-        //    return rtn;
-        //}
 
         public ActionResult About()
         {
